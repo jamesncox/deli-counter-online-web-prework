@@ -1,3 +1,5 @@
+require 'pry'
+
 katz_deli = []
 
 def line(katz_deli)
@@ -11,10 +13,17 @@ def line(katz_deli)
     puts "The line is currently: #{line_array.join(" ")}"
   end
 end
+
+place_in_line = 0
+
 def take_a_number(katz_deli, name)
-  katz_deli.push(name)
-  puts "Welcome, #{name}. You are number #{katz_deli.length} in line."
+  # katz_deli.push(name)
+  # puts "Welcome, #{name}. You are number #{katz_deli.length} in line."
+  place_in_line += 1
+  puts "You are #{place_in_line} in line."
+  
 end
+
 def now_serving(array)
   if array.empty?
     puts "There is nobody waiting to be served!"
